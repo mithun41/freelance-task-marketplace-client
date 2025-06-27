@@ -11,6 +11,7 @@ import TaskDetails from "../Components/DetailsTask/TaskDetails";
 import Error from "../Pages/Error/Error";
 import Loading from "../Components/Loading/Loading";
 import FeatureDetails from "../Components/DetailsTask/FeatureDetails";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -72,6 +73,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <FeatureDetails></FeatureDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard></Dashboard>
           </PrivateRoute>
         ),
       },

@@ -18,22 +18,28 @@ const Navbar = () => {
         {" "}
         <li>Home</li>
       </NavLink>
-      <NavLink to={"addtask"}>
+      {/* <NavLink to={"addtask"}>
         {" "}
         <li>Add Task</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink to={"browse-tasks"}>
         {" "}
         <li>Browse Tasks</li>
       </NavLink>
-      <NavLink to={"my-posted-tasks"}>
+      {/* <NavLink to={"my-posted-tasks"}>
         {" "}
         <li>My Posted Tasks</li>
-      </NavLink>
+      </NavLink> */}
+      {user && (
+        <NavLink to={"dashboard"}>
+          {" "}
+          <li>Dashboard</li>
+        </NavLink>
+      )}
     </>
   );
   return (
-    <div className="navbar bg-base-100 dark:bg-gray-800 dark:text-white  lg:w-11/12 lg:mx-auto">
+    <div className="navbar sticky top-0 z-50 bg-base-100 dark:bg-gray-800 dark:text-white  px-8">
       <div className="navbar-start ">
         <div className="dropdown ">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden ">
